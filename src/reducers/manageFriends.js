@@ -6,6 +6,7 @@ export function manageFriends(state, action){
     let index = state.friends.findIndex((f) => { return f.id === action.payload})
     let copy = state.friends
     let newarr = copy.slice(0, index).concat(copy.slice(index + 1))
+    console.log(newarr);
 
     return Object.assign({}, state, {friends: newarr})
   }else{
